@@ -28,6 +28,7 @@ export const ScheduleDataDocButton: React.FunctionComponent<IProps> = ({
                 tooltip="Schedule DataDoc"
                 tooltipPos="left"
                 title="Schedule"
+                standardSize
             />
             {modal}
         </div>

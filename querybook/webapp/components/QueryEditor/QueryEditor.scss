@@ -11,6 +11,15 @@
             // HACK: chrome bug where border width < 1px will not get drawn
             border-left-width: 1.4px;
         }
+
+        &.cm-s-monokai {
+            background: var(--color-secondary);
+            color: var(--text-color);
+
+            .CodeMirror-gutters {
+                background: var(--color-secondary);
+            }
+        }
     }
 
     .CodeMirror-hover {

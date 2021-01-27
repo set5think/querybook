@@ -14,8 +14,13 @@
 
     .list-header {
         display: flex;
-        border-bottom: 1px solid var(--border-color);
         justify-content: space-between;
+        margin-bottom: var(--padding);
+        background: var(--color-button-bg);
+        border-radius: var(--border-radius);
+        padding-right: 5px;
+        height: 43px; //TODO: Standardize inputs
+        align-items: center;
 
         // for safari
         flex-shrink: 0;

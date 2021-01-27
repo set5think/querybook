@@ -22,15 +22,17 @@ const StyledQuerybookLogo = styled.span`
         user-select: none;
         color: var(--color-accent);
 
-        background: -webkit-linear-gradient(
-            45deg,
-            var(--color-accent-text),
-            var(--color-accent),
-            var(--color-accent-bg)
-        );
+        background: black;
+        // background: -webkit-linear-gradient(
+        //     45deg,
+        //     var(--color-accent-text),
+        //     var(--color-accent),
+        //     var(--color-accent-bg)
+        // );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        margin-top: -30px;
     }
 `;
 

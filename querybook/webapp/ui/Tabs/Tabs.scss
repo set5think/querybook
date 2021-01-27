@@ -4,10 +4,9 @@
         display: flex;
         flex-direction: row;
         text-align: center;
-        font-weight: var(--bold-font);
 
         li {
-            padding: 8px 8px 4px;
+            padding: 5px 0px;
             box-sizing: border-box;
             border-bottom: solid 1px transparent;
             display: flex;
@@ -15,7 +14,7 @@
             justify-content: center;
 
             a {
-                color: var(--text-color);
+                color: var(--ui-text-color);
 
                 .Icon {
                     & ~ span {
@@ -31,15 +30,18 @@
             }
 
             &.active {
-                border-bottom-color: var(--select-border-color);
+                // border-bottom-color: var(--select-border-color);
+                background: var(--color-button-bg);
+                border-radius: 5px;
+
                 a {
-                    color: var(--text-color);
+                    // color: var(--color-accent);
                 }
             }
 
             &:not(.active):hover {
                 cursor: pointer;
-                border-bottom-color: var(--hover-border-color);
+
                 a {
                     color: var(--text-color);
                 }

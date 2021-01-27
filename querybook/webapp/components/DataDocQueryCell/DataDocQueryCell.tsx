@@ -378,6 +378,7 @@ class DataDocQueryCellComponent extends React.Component<IProps, IState> {
 
         return additionalButtons.length > 0 ? (
             <Dropdown
+                className="DataDocQueryCell-more-button"
                 customButtonRenderer={this.additionalDropDownButtonFormatter}
                 isRight
             >
@@ -480,6 +481,7 @@ class DataDocQueryCellComponent extends React.Component<IProps, IState> {
         return (
             <div className="query-metadata">
                 <div className="query-title">{queryTitleDOM}</div>
+                {this.getAdditionalDropDownButtonDOM()}
                 <QueryRunButton
                     ref={this.runButtonRef}
                     queryEngineById={queryEngineById}
@@ -493,7 +495,6 @@ class DataDocQueryCellComponent extends React.Component<IProps, IState> {
                         'engine'
                     )}
                 />
-                {this.getAdditionalDropDownButtonDOM()}
             </div>
         );
     }
@@ -545,7 +546,7 @@ class DataDocQueryCellComponent extends React.Component<IProps, IState> {
             query.trim().length === 0 && isEditable ? (
                 <div className="add-snippet-wrapper flex-center">
                     <TextButton
-                        title="Add Template"
+                        title="Insert a Snippet"
                         onClick={this.toggleInsertQuerySnippetModal}
                     />
                 </div>

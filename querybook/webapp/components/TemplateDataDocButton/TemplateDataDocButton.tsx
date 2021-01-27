@@ -46,6 +46,7 @@ export const TemplateDataDocButton: React.FunctionComponent<IProps> = ({
                 tooltip="Set Templated Variables"
                 tooltipPos="left"
                 title="Template"
+                standardSize
             />
 
             {templatedModal}

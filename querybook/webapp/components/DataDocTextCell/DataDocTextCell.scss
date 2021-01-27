@@ -9,7 +9,7 @@
     }
 
     &:hover {
-        background-color: var(--hover-bg-color);
+        background-color: var(--color-secondary);
     }
 
     h1 {
@@ -17,6 +17,8 @@
         // So it visually aligns
         margin-left: -3px;
         font-weight: bold;
+        font-family: var(--family-display);
+        color: var(--color-text-titles-big);
     }
 
     h2 {
@@ -24,6 +26,7 @@
         // So it visually aligns
         margin-left: -2px;
         font-weight: bold;
+        color: var(--color-text-titles-big);
     }
 
     blockquote {

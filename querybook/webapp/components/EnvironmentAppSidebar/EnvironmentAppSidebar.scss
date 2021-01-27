@@ -1,4 +1,11 @@
 .EnvironmentAppSidebar {
+
+
+    &.Sidebar {
+        // border-right: var(--border) !important;
+        border-right: none !important;
+    }
+
     .EnvironmentAppSidebar-content {
         display: flex;
         flex-direction: column;
@@ -12,6 +19,11 @@
             .sidebar-content-main-navigator {
                 flex: 1;
                 overflow: hidden;
+                background: var(--bg-color-secondary);
+
+                &:not(:empty) {
+                    padding: 10px;
+                }
 
                 .QueryViewNavigator,
                 .QuerySnippetNavigator {
@@ -47,10 +59,10 @@
 
     &:not(.collapsed) {
         .EntitySidebar {
-            border-right: var(--border);
+            // border-right: var(--border);
         }
 
-        .sidebar-environment-picker {
+        .sidebar-environment-picker:not(:empty) {
             border-bottom: var(--border);
         }
 
@@ -62,13 +74,12 @@
     &.collapsed {
         .sidebar-environment-picker {
             text-align: center;
-            border-bottom: solid 1px transparent;
+            // border-bottom: solid 1px transparent;
+
             .EnvironmentDropdownButton .Dropdown-trigger {
                 display: flex;
                 justify-content: center;
             }
         }
-
-        border-right: var(--border);
     }
 }
