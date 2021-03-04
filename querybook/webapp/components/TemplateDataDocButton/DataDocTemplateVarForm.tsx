@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 
 import { FormField, FormFieldInputSection } from 'ui/Form/FormField';
 import { Title } from 'ui/Title/Title';
-import { Button } from 'ui/Button/Button';
+import { Button, SoftButton, TextButton } from 'ui/Button/Button';
 import { InfoButton } from 'ui/Button/InfoButton';
 import { IconButton } from 'ui/Button/IconButton';
 import './DataDocTemplateVarForm.scss';
@@ -53,13 +53,13 @@ export const DataDocTemplateVarForm: React.FunctionComponent<IDataDocTemplateVar
                                           <FormFieldInputSection>
                                               <Field
                                                   name={`variables.${index}[0]`}
-                                                  placeholder="Insert name"
+                                                  placeholder="Name"
                                               />
                                           </FormFieldInputSection>
                                           <FormFieldInputSection>
                                               <Field
                                                   name={`variables.${index}[1]`}
-                                                  placeholder="Insert value"
+                                                  placeholder="Value"
                                               />
                                           </FormFieldInputSection>
                                       </FormField>
@@ -76,12 +76,12 @@ export const DataDocTemplateVarForm: React.FunctionComponent<IDataDocTemplateVar
                               ))
                             : null;
                         const controlDOM = isEditable && (
-                            <div className="flex-right">
-                                <Button
-                                    title="Add New Variable"
+                            <div className="horizontal-space-between">
+                                <TextButton
+                                    title="+ Add New Variable"
                                     onClick={() => arrayHelpers.push(['', ''])}
                                 />
-                                <Button
+                                <SoftButton
                                     onClick={() => handleSubmit()}
                                     title="Save"
                                     disabled={isSubmitting || !isValid}
@@ -109,7 +109,7 @@ export const DataDocTemplateVarForm: React.FunctionComponent<IDataDocTemplateVar
                     <Form>
                         <div className="horizontal-space-between">
                             <div>
-                                <Title>Templated Variables</Title>
+                                <Title>Variables</Title>
                             </div>
                             <div>
                                 <InfoButton layout={['bottom', 'right']}>

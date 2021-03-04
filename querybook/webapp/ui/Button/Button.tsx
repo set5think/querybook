@@ -9,6 +9,7 @@ import {
     ButtonThemeType,
     computeStyleButtonProps,
 } from './ButtonTheme';
+import './Button.scss';
 
 export type ButtonProps = React.HTMLAttributes<HTMLSpanElement> &
     ISharedButtonProps & {
@@ -92,10 +93,11 @@ Button.defaultProps = defaultProps;
 Button.displayName = 'Button';
 
 export const TextButton = withBoundProps(Button, {
-    theme: 'text',
-    fontWeight: '700',
-    uppercase: true,
-    pushable: true,
+    theme: 'fill',
+    className: 'Button-textButton'
+    // fontWeight: '700',
+    // uppercase: true,
+    // pushable: true,
 });
 
 export const SoftButton = withBoundProps(Button, {

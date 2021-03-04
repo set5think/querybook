@@ -7,6 +7,9 @@ import { IStandardModalProps } from './types';
 import { useDebounce } from 'hooks/useDebounce';
 import { useAppBlur } from 'hooks/ui/useAppBlur';
 
+// Blurring takes extra time so disabling by default
+const BLUR_MODAL_BACKGROUNDS = false;
+
 export const StandardModal: React.FunctionComponent<IStandardModalProps> = ({
     hideClose = false,
     className = '',
@@ -14,9 +17,12 @@ export const StandardModal: React.FunctionComponent<IStandardModalProps> = ({
     onHide,
     title = '',
 }) => {
-    useAppBlur();
+    if (BLUR_MODAL_BACKGROUNDS) {
+        useAppBlur();
+    }
     const mounted = useMounted();
-    const active = useDebounce(mounted, 100); // delay the mount by 100
+    // Note: Ask about this before merging
+    const active = useDebounce(mounted, 1); // delay the mount by 1ms
 
     const modalClassName = classNames({
         StandardModal: true,

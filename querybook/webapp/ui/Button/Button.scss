@@ -1,156 +1,166 @@
 @import './../../scss_variables.scss';
 
 .Button {
-    display: inline-flex;
-    margin: 0px 4px;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    text-align: center;
-    cursor: pointer;
-    padding: 4px 8px;
-    background-color: inherit;
-    color: var(--ui-text-color);
-    align-items: center;
-    white-space: nowrap;
-    position: relative;
 
-    .Icon {
-        margin-left: -4px;
-        svg {
-            padding: 16%;
-        }
-    }
-
-    .Icon + span {
-        margin-left: 4px;
-    }
-
-    &.icon-only {
-        .Icon {
-            margin-left: 0px;
-        }
-    }
-
-    // special buttons
-    &.inline-text {
-        @include pushable();
-        color: inherit;
-        font-size: inherit;
-        font-weight: 700;
-        text-transform: uppercase;
-
-        .Icon {
-            svg {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        &:hover {
-            background-color: var(--color-button-hover);
-        }
-    }
-
-    &.soft {
-        user-select: none;
+    // Simpler styling
+    &.Button-textButton {
         background: none;
-        color: var(--ui-text-color);
-        padding: 5px 10px;
-        font-weight: bold;
-        border: none;
+        padding: 5px 0px;
 
         &:hover {
-            background: var(--color-button-bg);
+            background: none;
         }
     }
 
-    &.full-width {
-        display: flex;
-        justify-content: center;
-        margin: 0px;
-        border: none;
-        border-radius: 0px;
-        padding: 8px;
-        background-color: var(--light-bg-color);
-        font-weight: bold;
-        text-transform: uppercase;
-    }
+    // display: inline-flex;
+    // border: var(--border);
+    // border-radius: var(--border-radius);
+    // text-align: center;
+    // cursor: pointer;
+    // padding: 5px 10px;
+    // background-color: inherit;
+    // color: var(--ui-text-color);
+    // align-items: center;
+    // white-space: nowrap;
+    // position: relative;
 
-    &.cancel {
-        border-color: var(--color-false-dark);
-        color: var(--color-false-dark);
-        font-weight: 500;
-    }
+    // .Icon {
+    //     margin-left: -4px;
+    //     svg {
+    //         padding: 16%;
+    //     }
+    // }
 
-    &.confirm {
-        border-color: var(--color-true-dark);
-        color: var(--color-true-dark);
-        font-weight: 500;
-    }
+    // .Icon + span {
+    //     margin-left: 4px;
+    // }
 
-    // props
-    &.small {
-        margin: 0px;
-        padding: 1px 4px;
-    }
+    // &.icon-only {
+    //     .Icon {
+    //         margin-left: 0px;
+    //     }
+    // }
 
-    &.disabled {
-        cursor: not-allowed;
-        background-color: var(--color-null);
-        color: var(--light-text-color);
-        border-color: var(--color-null);
-    }
+    // // special buttons
+    // &.inline-text {
+    //     @include pushable();
+    //     color: inherit;
+    //     font-size: inherit;
+    //     font-weight: 700;
+    //     text-transform: uppercase;
 
-    &.borderless {
-        border: none;
+    //     .Icon {
+    //         svg {
+    //             width: 20px;
+    //             height: 20px;
+    //         }
+    //     }
 
-        &:hover {
-            background-color: var(--color-button-hover);
-        }
-    }
+    //     &:hover {
+    //         background-color: var(--color-button-hover);
+    //     }
+    // }
 
-    &.inverted {
-        background-color: var(--color-accent-bg);
-        color: var(--color-accent-text);
-        font-weight: 500;
+    // &.soft {
+    //     user-select: none;
+    //     background: none;
+    //     color: var(--ui-text-color);
+    //     padding: 5px 10px;
+    //     font-weight: bold;
+    //     border: none;
 
-        &:hover {
-            background-color: var(--color-accent-bg-hover);
-        }
-    }
+    //     &:hover {
+    //         background: var(--color-button-bg);
+    //     }
+    // }
 
-    &.attached-right {
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-        margin-right: 0px;
-        + .Button {
-            border-left: 0px;
-        }
-    }
+    // &.full-width {
+    //     display: flex;
+    //     justify-content: center;
+    //     margin: 0px;
+    //     border: none;
+    //     border-radius: 0px;
+    //     padding: 8px;
+    //     background-color: var(--light-bg-color);
+    //     font-weight: bold;
+    //     text-transform: uppercase;
+    // }
 
-    &.attached-left {
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-        margin-left: 0px;
-    }
+    // &.cancel {
+    //     border-color: var(--color-false-dark);
+    //     color: var(--color-false-dark);
+    //     font-weight: 500;
+    // }
 
-    &.pushable {
-        @include pushable();
-    }
+    // &.confirm {
+    //     border-color: var(--color-true-dark);
+    //     color: var(--color-true-dark);
+    //     font-weight: 500;
+    // }
 
-    .ping-message {
-        position: absolute;
-        cursor: default;
-        border-radius: 100px;
-        background-color: var(--color-accent-bg);
+    // // props
+    // &.small {
+    //     margin: 0px;
+    //     padding: 1px 4px;
+    // }
 
-        right: -8px;
-        top: -8px;
+    // &.disabled {
+    //     cursor: not-allowed;
+    //     background-color: var(--color-null);
+    //     color: var(--light-text-color);
+    //     border-color: var(--color-null);
+    // }
 
-        padding: 1px 6px 0px 6px;
+    // &.borderless {
+    //     border: none;
 
-        color: var(--color-accent-text);
-        font-size: var(--xsmall-text-size);
-        font-weight: var(--bold-font);
-    }
+    //     &:hover {
+    //         background-color: var(--color-button-hover);
+    //     }
+    // }
+
+    // &.inverted {
+    //     background-color: var(--color-accent-bg);
+    //     color: var(--color-accent-text);
+    //     font-weight: 500;
+
+    //     &:hover {
+    //         background-color: var(--color-accent-bg-hover);
+    //     }
+    // }
+
+    // &.attached-right {
+    //     border-top-right-radius: 0px;
+    //     border-bottom-right-radius: 0px;
+    //     margin-right: 0px;
+    //     + .Button {
+    //         border-left: 0px;
+    //     }
+    // }
+
+    // &.attached-left {
+    //     border-top-left-radius: 0px;
+    //     border-bottom-left-radius: 0px;
+    //     margin-left: 0px;
+    // }
+
+    // &.pushable {
+    //     @include pushable();
+    // }
+
+    // .ping-message {
+    //     position: absolute;
+    //     cursor: default;
+    //     border-radius: 100px;
+    //     background-color: var(--color-accent-bg);
+
+    //     right: -8px;
+    //     top: -8px;
+
+    //     padding: 1px 6px 0px 6px;
+
+    //     color: var(--color-accent-text);
+    //     font-size: var(--xsmall-text-size);
+    //     font-weight: var(--bold-font);
+    // }
 }

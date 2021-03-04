@@ -80,10 +80,10 @@ export function computeStyleButtonProps(
         themeProps.hoverBorderColor =
             colorConfig.secondaryHover || colorConfig.secondary;
     } else if (theme === 'text') {
-        themeProps.color = colorConfig.primary;
-        themeProps.hoverColor = colorConfig.primaryHover || colorConfig.primary;
+        // themeProps.color = colorConfig.primary;
+        // themeProps.hoverColor = colorConfig.primaryHover || colorConfig.primary;
         themeProps.bgColor = 'transparent';
-        themeProps.hoverBgColor = 'var(--light-bg-color)';
+        // themeProps.hoverBgColor = 'var(--light-bg-color)';
     }
 
     return themeProps;
