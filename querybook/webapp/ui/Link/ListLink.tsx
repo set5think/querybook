@@ -35,8 +35,8 @@ export const ListLink: React.FunctionComponent<IProps> = ({
             ) : placeholder ? (
                 <span className="ListLinkPlaceholder">{placeholder}</span>
             ) : null}
-            {icon && <Icon name={icon} />}
             {children}
+            {icon && <Icon name={icon} className="ListLink-status-icon" />}
         </Link>
     );
 };

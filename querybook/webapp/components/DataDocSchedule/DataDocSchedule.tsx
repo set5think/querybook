@@ -50,7 +50,6 @@ export const DataDocSchedule: React.FunctionComponent<IDataDocScheduleProps> = (
                 items={SCHEDULE_TABS}
                 selectedTabKey={currentTab}
                 onSelect={setCurrentTab}
-                wide
             />
         </div>
     );

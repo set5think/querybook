@@ -481,7 +481,6 @@ class DataDocQueryCellComponent extends React.Component<IProps, IState> {
         return (
             <div className="query-metadata">
                 <div className="query-title">{queryTitleDOM}</div>
-                {this.getAdditionalDropDownButtonDOM()}
                 <QueryRunButton
                     ref={this.runButtonRef}
                     queryEngineById={queryEngineById}
@@ -495,6 +494,7 @@ class DataDocQueryCellComponent extends React.Component<IProps, IState> {
                         'engine'
                     )}
                 />
+                {this.getAdditionalDropDownButtonDOM()}
             </div>
         );
     }
@@ -514,7 +514,7 @@ class DataDocQueryCellComponent extends React.Component<IProps, IState> {
         const fullScreenButton = (
             <div className="fullscreen-button-wrapper">
                 <Button
-                    icon="maximize"
+                    icon={isFullScreen ? 'minimize-2' : 'maximize-2'}
                     onClick={toggleFullScreen}
                     theme="text"
                     pushable

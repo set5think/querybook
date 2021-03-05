@@ -384,7 +384,6 @@ class QuerySnippetComposerComponent extends React.PureComponent<
             >
                 <Tabs
                     selectedTabKey={form.is_public ? 'Public' : 'Private'}
-                    pills
                     items={['Private', 'Public']}
                     onSelect={(checked) =>
                         this.onPublicChange(checked === 'Public')

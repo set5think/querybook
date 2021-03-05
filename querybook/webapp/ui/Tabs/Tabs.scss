@@ -6,7 +6,8 @@
         text-align: center;
 
         li {
-            padding: 5px 0px;
+            // padding: 5px 0px;
+            padding: var(--padding);
             box-sizing: border-box;
             border-bottom: solid 1px transparent;
             display: flex;

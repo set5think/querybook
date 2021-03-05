@@ -152,7 +152,6 @@ export const DataDocViewersList: React.FunctionComponent<IDataDocViewersListProp
             <div className="public-row-switch">
                 <Tabs
                     selectedTabKey={dataDoc.public ? 'Public' : 'Private'}
-                    pills
                     align="center"
                     items={['Private', 'Public']}
                     onSelect={
@@ -167,11 +166,9 @@ export const DataDocViewersList: React.FunctionComponent<IDataDocViewersListProp
                 />
             </div>
             <div className="public-row-description">
-                <Title size={6} subtitle>
-                    {dataDoc.public
-                        ? 'This document can be viewed by anyone.'
-                        : 'Only invited users can view this document.'}
-                </Title>
+                {dataDoc.public
+                    ? 'This document can be viewed by anyone who has access to this environment.'
+                    : 'Only invited users can view this document.'}
             </div>
         </>
     );

@@ -4,13 +4,13 @@
     border-radius: var(--border-radius);
     font-size: var(--text-size);
 
-    &:focus-within {
-        background-color: var(--light-bg-color);
-    }
+    // &:focus-within {
+    //     background-color: var(--light-bg-color);
+    // }
 
-    &:hover {
-        background-color: var(--color-secondary);
-    }
+    // &:hover {
+    //     background-color: var(--color-secondary);
+    // }
 
     h1 {
         font-size: var(--xlarge-text-size);

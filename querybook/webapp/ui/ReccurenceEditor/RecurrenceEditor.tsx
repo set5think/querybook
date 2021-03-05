@@ -59,7 +59,7 @@ export const RecurrenceEditor: React.FunctionComponent<IProps> = ({
         </FormField>
     );
     const recurrenceTypeField = (
-        <FormField label="Recurrence Type">
+        <FormField label="Recurrence">
             <Field name="recurrence.recurrence">
                 {({ field }) => (
                     <Tabs
@@ -75,7 +75,6 @@ export const RecurrenceEditor: React.FunctionComponent<IProps> = ({
                             }
                             setRecurrence(newRecurrence);
                         }}
-                        pills
                     />
                 )}
             </Field>

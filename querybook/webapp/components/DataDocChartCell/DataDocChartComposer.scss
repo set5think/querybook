@@ -2,10 +2,13 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+
     .DataDocChartComposer-content {
         display: flex;
         flex-direction: row;
-        height: calc(100vh - 38px);
+        height: 100%;
+
         .DataDocChartComposer-left {
             display: flex;
             flex-direction: column;
@@ -16,6 +19,7 @@
             .ReactTable {
                 width: 100%;
             }
+
             .DataDocChartComposer-chart {
                 display: flex;
                 flex-direction: column;
@@ -24,6 +28,7 @@
                 margin: 0 auto;
                 width: 100%;
                 overflow-y: hidden;
+
                 .DataDocChartComposer-chart-sizer {
                     flex: 1;
                     position: relative;
@@ -58,32 +63,52 @@
             min-width: 360px;
             display: flex;
             flex-direction: column;
+            position: relative;
 
-            .DataDocChartComposer-form {
-                flex: 1;
-                overflow-y: auto;
-                padding-right: 0px;
-                flex-grow: 1;
-                padding: 8px;
-                padding-right: 0;
-                .DataDocChartComposer-info {
-                    color: var(--light-text-color);
+            .DataDocChartComposer-right-inner {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                display: flex;
+                flex-direction: column;
+
+                .Tabs {
+                    padding: var(--padding);
                 }
 
-                .Select,
-                select,
-                input:not([type='checkbox']) {
-                    width: 100%;
+                .DataDocChartComposer-form {
+                    flex: 1;
+                    overflow-y: auto;
+                    padding-right: 0px;
+                    flex-grow: 1;
+                    padding: var(--padding);
+                    padding-right: 0;
+                    .DataDocChartComposer-info {
+                        color: var(--light-text-color);
+                    }
+
+                    .Select,
+                    select,
+                    input:not([type='checkbox']) {
+                        width: 100%;
+                    }
+
+                    .Checkbox {
+                        display: flex;
+                        margin-left: 4px;
+                        font-size: var(--small-text-size);
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 4px 0px;
+                    }
                 }
 
-                .Checkbox {
-                    display: flex;
-                    margin-left: 4px;
-                    font-size: var(--small-text-size);
-                    flex-direction: row-reverse;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin: 4px 0px;
+                .DataDocChartComposer-button {
+                    padding: var(--padding);
+                    text-align: center;
                 }
             }
         }

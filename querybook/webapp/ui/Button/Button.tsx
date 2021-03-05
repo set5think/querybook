@@ -107,13 +107,21 @@ export const SoftButton = withBoundProps(Button, {
     pushable: true,
 });
 
-export type ButtonType = 'soft' | 'text' | 'default';
+export const DiscreetSoftButton = withBoundProps(Button, {
+    theme: 'discreet_fill',
+    color: 'light',
+    fontWeight: '700',
+    pushable: true,
+});
+
+export type ButtonType = 'soft' | 'text' | 'discreet_soft' | 'default';
 
 const buttonComponentByType: Record<
     ButtonType,
     React.ComponentType<ButtonProps>
 > = {
     soft: SoftButton,
+    discreet_soft: DiscreetSoftButton,
     text: TextButton,
     default: Button,
 };

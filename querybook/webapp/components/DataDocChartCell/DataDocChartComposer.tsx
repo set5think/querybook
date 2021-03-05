@@ -949,18 +949,19 @@ const DataDocChartComposerComponent: React.FunctionComponent<
             <div className="DataDocChartComposer-content">
                 {makeLeftDOM()}
                 <div className="DataDocChartComposer-right">
-                    {tabsDOM}
-                    {formDOM}
-                    {isEditable ? (
-                        <div className="DataDocChartComposer-button">
-                            <SoftButton
-                                onClick={() => handleSubmit()}
-                                title="Submit"
-                                fullWidth
-                                pushable={false}
-                            />
-                        </div>
-                    ) : null}
+                    <div className="DataDocChartComposer-right-inner">
+                        {tabsDOM}
+                        {formDOM}
+                        {isEditable ? (
+                            <div className="DataDocChartComposer-button">
+                                <SoftButton
+                                    onClick={() => handleSubmit()}
+                                    title="Save Changes"
+                                    pushable={false}
+                                />
+                            </div>
+                        ) : null}
+                    </div>
                 </div>
             </div>
         </div>

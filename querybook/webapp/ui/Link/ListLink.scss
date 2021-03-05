@@ -25,13 +25,22 @@
 
     .Icon {
         flex-shrink: 1;
+
         svg {
             padding: 20%;
         }
     }
 
+    .Icon.ListLink-status-icon {
+        // To keep same size as ListLink without Icon
+        height: 17px;
+        position: relative;
+        top: -4px;
+    }
+
     &.row {
-        padding: 4.5px 10px 4.5px 4.5px;
+        padding: 5px;
+
         .ListLinkText,
         .ListLinkPlaceholder {
             line-height: normal;

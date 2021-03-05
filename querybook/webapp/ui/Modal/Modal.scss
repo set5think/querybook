@@ -1,7 +1,7 @@
 .Modal {
     .Modal-title {
         background-color: var(--bg-color-secondary);
-        height: 62px; // This is dependent on Tabs height + 2 --padding
+        min-height: 62px; // This is dependent on Tabs height + 2 --padding
         padding: var(--padding);
         padding-left: unquote("calc(2 * var(--padding))");
         display: flex;

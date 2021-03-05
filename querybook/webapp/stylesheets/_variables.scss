@@ -47,6 +47,9 @@ body {
     --color-blue: #85d0ce;
     --color-blue-dark: #34657f;
 
+    // General
+    --color-button-bg-destructive: hsl(0deg 53% 62%);
+
     // Type
     --family-sans-serif: BlinkMacSystemFont, -apple-system, 'Avenir Next',
         'Avenir', 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial,
@@ -169,6 +172,9 @@ body.light-theme {
     --text-highlight: rgba(255, 255, 0, 0.5);
 
     --modal-bg-opacity: 0.2;
+
+    --text-empty-message-color: #353535;
+    --sidebar-hover-color: rgba(0, 0, 0, 0.1);
 }
 
 body.dark-theme {
@@ -205,6 +211,9 @@ body.dark-theme {
     font-weight: 500;
 
     --modal-bg-opacity: 0.8;
+
+    --text-empty-message-color: #353535;
+    --sidebar-hover-color: rgba(255, 255, 255, 0.1);
 }
 
 body.dawn-theme {
@@ -235,6 +244,9 @@ body.dawn-theme {
     --color-blue: #79cdc7;
 
     --modal-bg-opacity: 0.2;
+
+    --text-empty-message-color: #353535;
+    --sidebar-hover-color: rgba(0, 0, 0, 0.1);
 }
 
 body.night-theme {
@@ -277,6 +289,9 @@ body.night-theme {
     --tag-text-color: var(--invert-text-color);
 
     --modal-bg-opacity: 0.8;
+
+    --text-empty-message-color: #353535;
+    --sidebar-hover-color: rgba(255, 255, 255, 0.1);
 }
 
 body.lush-theme {
@@ -317,4 +332,7 @@ body.lush-theme {
     --tag-text-color: var(--invert-text-color);
 
     --modal-bg-opacity: 0.8;
+
+    --text-empty-message-color: #353535;
+    --sidebar-hover-color: rgba(0, 0, 0, 0.1);
 }

@@ -20,9 +20,8 @@
     }
 
     .DataDocNavigatorSection-empty {
-        color: var(--empty-text-color);
-        text-align: center;
-        font-weight: bold;
-        user-select: none;
+        font-size: var(--large-text-size);
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }

@@ -3,4 +3,9 @@
 .QueryExecutionBar {
     display: flex;
     align-items: center;
+    margin-bottom: var(--padding);
+
+    .CopyButton {
+        margin-left: var(--padding);
+    }
 }

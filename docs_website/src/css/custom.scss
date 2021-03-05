@@ -69,6 +69,21 @@
     align-items: center;
 }
 
+.flex-row.with-padding,
+.flex-right.with-padding,
+.flex-center.with-padding,
+.flex-left.with-padding {
+
+    div + div {
+        margin-left: var(--padding);
+    }
+
+    span + span {
+        margin-left: var(--padding);
+    }
+}
+
+
 .blur-page {
     filter: blur(10px);
 }

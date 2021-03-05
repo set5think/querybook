@@ -20,9 +20,10 @@
 
             .editor {
                 flex: 1;
-                margin: 0;
+                margin: 0px 10px 10px 10px;
                 overflow: hidden;
                 display: flex;
+
                 .QueryEditor {
                     flex: 1;
                 }
@@ -74,15 +75,12 @@
         .additional-dropdown-button {
             // @include pushable();
             @include fancy-hover();
-
             cursor: default;
-
             font-size: 20px;
+            margin-left: var(--padding);
             line-height: 38px;
-
             height: 40px;
             width: 40px;
-            margin-right: var(--padding);
             color: var(--ui-text-color);
 
             svg {
@@ -104,7 +102,7 @@
             position: absolute;
             top: 0;
             z-index: 9;
-            right: 0;
+            right: 5px;
 
             .Button {
                 background-color: transparent;
@@ -116,7 +114,7 @@
         text-align: center;
         position: absolute;
         top: 104px;
-        right: 53px;
+        right: 52px;
         z-index: 10;
     }
 }

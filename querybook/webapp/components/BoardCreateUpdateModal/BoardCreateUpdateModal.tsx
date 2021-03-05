@@ -7,7 +7,7 @@ import { sendConfirm } from 'lib/querybookUI';
 import { createBoard, updateBoard, deleteBoard } from 'redux/board/action';
 import { IStoreState, Dispatch } from 'redux/store/types';
 import { Title } from 'ui/Title/Title';
-import { Button } from 'ui/Button/Button';
+import { Button, SoftButton, TextButton } from 'ui/Button/Button';
 import { IStandardModalProps } from 'ui/Modal/types';
 import { Modal } from 'ui/Modal/Modal';
 import { IBoardRaw } from 'const/board';
@@ -40,7 +40,10 @@ export const BoardCreateUpdateForm: React.FunctionComponent<IBoardCreateUpdateFo
             onConfirm: () => {
                 dispatch(deleteBoard(boardId));
             },
-            message: 'Your list will be permanently removed.',
+            message: 'Your list will be permanently deleted.',
+            confirmText: 'Yes, delete list',
+            confirmIcon: 'alert-triangle',
+            isDestructiveAction: true,
         });
     }, [boardId]);
 
@@ -96,15 +99,14 @@ export const BoardCreateUpdateForm: React.FunctionComponent<IBoardCreateUpdateFo
                                 {nameField}
                                 {descriptionField}
                                 <br />
-                                <div className="right-align">
+                                <div className="horizontal-space-between">
                                     {!isCreateForm && (
-                                        <Button
+                                        <TextButton
                                             onClick={handleDeleteBoard}
-                                            title="Delete"
-                                            color="cancel"
+                                            title="Delete this List"
                                         />
-                                    )}
-                                    <Button
+                                    ) || <span>&nbsp;</span>}
+                                    <SoftButton
                                         disabled={!isValid || isSubmitting}
                                         onClick={submitForm}
                                         title={

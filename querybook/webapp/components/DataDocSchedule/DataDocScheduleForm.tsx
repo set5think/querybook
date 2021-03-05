@@ -230,6 +230,7 @@ export const DataDocScheduleForm: React.FunctionComponent<IDataDocScheduleFormPr
                                 disabled={!isValid || (!dirty && !isCreateForm)}
                                 onClick={submitForm}
                                 title={isCreateForm ? 'Create' : 'Update'}
+                                type="soft"
                             />
                         </div>
                     </Level>

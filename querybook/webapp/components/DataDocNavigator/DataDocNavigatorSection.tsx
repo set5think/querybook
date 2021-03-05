@@ -74,7 +74,7 @@ export const DataDocNavigatorSection: React.FC<INavigatorSectionProps> = ({
 
     const makeDataDocListDOM = () => {
         if (orderedDataDocs.length === 0) {
-            return <div className="DataDocNavigatorSection-empty ph12">No items in this section.</div>;
+            return <div className="DataDocNavigatorSection-empty ph12 empty-message">No favorites</div>;
         }
 
         const listDOM = orderedDataDocs.map((dataDoc) => {

@@ -56,32 +56,12 @@
         .ImpressionWidget {
             margin-left: 8px;
         }
-        .favorite-icon-button {
-            &.favorite-icon-button-favorited {
-                color: var(--color-accent);
-                .Icon {
-                    svg {
-                        fill: var(--color-accent);
-                    }
-                }
 
-                &:hover,
-                &.active {
-                    .Icon {
-                        color: var(--text-color);
-                        svg {
-                            fill: var(--text-color);
-                        }
-                    }
-                }
-            }
-        }
         .data-doc-header {
             padding: 36px 12px;
             padding-top: 0px;
             padding-bottom: 0px;
             padding-top: 10px;
-            background: var(--color-secondary);
             border-radius: var(--border-radius);
             margin-bottom: 25px;
 
@@ -101,21 +81,23 @@
             .ImpressionWidget {
                 margin-left: 8px;
             }
+
             .favorite-icon-button {
                 &.favorite-icon-button-favorited {
-                    color: var(--color-yellow);
+                    color: var(--color-accent);
+
                     .Icon {
                         svg {
-                            fill: var(--color-yellow);
+                            fill: var(--color-accent);
                         }
                     }
 
                     &:hover,
                     &.active {
                         .Icon {
-                            color: var(--color-yellow-light);
+                            color: var(--text-color);
                             svg {
-                                fill: var(--color-yellow-light);
+                                fill: var(--text-color);
                             }
                         }
                     }
@@ -136,8 +118,9 @@
         .data-doc-container {
             .data-doc-cell-container-pair {
                 &.highlight-cell {
-                    animation-name: highlight-fade;
-                    animation-duration: 5s;
+                    border: 2px solid var(--color-accent);
+                    border-radius: var(--border-radius);
+                    margin: -2px;
                 }
 
                 position: relative;

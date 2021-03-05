@@ -14,7 +14,7 @@
         background: var(--color-button-bg);
         border-radius: var(--border-radius);;
         padding-right: 5px;
-        height: 43px; //TODO: Standardize inputs
+        height: 45px; //TODO: Standardize inputs
         align-items: center;
 
         .QueryViewFilter-tags,
@@ -62,8 +62,10 @@
 
 .QueryResult {
     cursor: pointer;
-    border-bottom: var(--border);
-    padding: 4px 12px;
+    padding: var(--padding);
+    margin-bottom: var(--padding);
+    border-radius: var(--border-radius);
+    background-color: var(--color-button-bg);
 
     &:hover,
     &.selected {
@@ -77,5 +79,9 @@
     .query-context {
         @include ellipsis(3);
         word-break: break-all;
+    }
+
+    .QueryResult-time {
+        color: var(--ui-text-color);
     }
 }

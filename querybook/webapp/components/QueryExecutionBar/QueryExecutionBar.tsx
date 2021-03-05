@@ -43,7 +43,7 @@ export const QueryExecutionBar: React.FunctionComponent<IProps> = ({
     );
 
     return (
-        <>
+        <div className="QueryExecutionBar">
             {executionDateDOM}
             {notificationButtonDOM}
             <CopyButton
@@ -53,6 +53,6 @@ export const QueryExecutionBar: React.FunctionComponent<IProps> = ({
                 icon="link"
                 title="Share Execution"
             />
-        </>
+        </div>
     );
 };

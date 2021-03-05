@@ -1,13 +1,14 @@
 import { IStyledButtonThemeProps } from './StyledButton';
 
 export const ButtonColors = [
+    'destructive',
     'confirm',
     'cancel',
     'accent',
     'light',
     'default',
 ] as const;
-export const ButtonThemes = ['outline', 'text', 'fill'] as const;
+export const ButtonThemes = ['outline', 'text', 'fill', 'discreet_fill'] as const;
 
 export type ButtonColorType = typeof ButtonColors[number];
 export type ButtonThemeType = typeof ButtonThemes[number];
@@ -20,6 +21,11 @@ interface IButtonColorConfig {
 }
 
 const buttonThemeToProps: Record<ButtonColorType, IButtonColorConfig> = {
+    destructive: {
+        primary: 'var(--color-button-bg-destructive)',
+        secondary: 'var(--color-button-bg-destructive)',
+        secondaryHover: 'var(--color-button-bg-destructive)',
+    },
     confirm: {
         primary: 'var(--color-true-dark)',
         secondary: 'var(--color-true-dark)',
@@ -56,18 +62,20 @@ export function computeStyleButtonProps(
     const secondaryIsPrimary = colorConfig.secondary === colorConfig.primary;
     const themeProps: IStyledButtonThemeProps = {};
 
-    if (theme === 'fill') {
+    if (theme === 'fill' || theme === 'discreet_fill') {
         if (!secondaryIsPrimary) {
             themeProps.color = colorConfig.primary;
             themeProps.hoverColor =
                 colorConfig.primaryHover || colorConfig.primary;
-            themeProps.bgColor = colorConfig.secondary;
+            themeProps.bgColor = theme === 'discreet_fill' ?
+                'transparent': colorConfig.secondary;
             themeProps.hoverBgColor =
                 colorConfig.secondaryHover || colorConfig.secondary;
         } else {
             themeProps.color = 'var(--bg-color)';
             themeProps.hoverColor = 'var(--light-bg-color)';
-            themeProps.bgColor = colorConfig.primary;
+            themeProps.bgColor = theme === 'discreet_fill' ?
+                'transparent': colorConfig.primary;
             themeProps.hoverBgColor =
                 colorConfig.primaryHover || colorConfig.primary;
         }
@@ -83,6 +91,7 @@ export function computeStyleButtonProps(
         // themeProps.color = colorConfig.primary;
         // themeProps.hoverColor = colorConfig.primaryHover || colorConfig.primary;
         themeProps.bgColor = 'transparent';
+        themeProps.padding = '5px 0px';
         // themeProps.hoverBgColor = 'var(--light-bg-color)';
     }
 

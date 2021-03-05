@@ -235,9 +235,9 @@ textarea {
     font-size: inherit;
     color: inherit;
 
-    &:hover {
-        background-color: var(--color-button-hover);
-    }
+    // &:hover {
+    //     background-color: var(--color-secondary);
+    // }
 
     &:active,
     &:focus {

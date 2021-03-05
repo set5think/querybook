@@ -29,7 +29,10 @@ export const DeleteDataDocButton: React.FunctionComponent<IDeleteDataDocButtonPr
         () =>
             sendConfirm({
                 header: 'Delete DataDoc',
-                message: 'Are you sure to permanently delete this DataDoc?',
+                message: 'Are you sure you want to permanently delete this DataDoc?',
+                confirmText: 'Yes, permanently delete this DataDoc',
+                confirmIcon: 'alert-triangle',
+                isDestructiveAction: true,
                 onConfirm: () => {
                     toast.promise(
                         dispatch(dataDocActions.deleteDataDoc(docId)).then(() =>
