@@ -246,6 +246,7 @@ textarea {
     }
     &::placeholder {
         color: var(--light-text-color);
+        // color: var(--empty-text-color);
     }
 }
 

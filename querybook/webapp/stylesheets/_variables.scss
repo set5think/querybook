@@ -48,7 +48,7 @@ body {
     --color-blue-dark: #34657f;
 
     // General
-    --color-button-bg-destructive: hsl(0deg 53% 62%);
+    --color-button-bg-destructive: hsl(0deg 66% 29%);
 
     // Type
     --family-sans-serif: BlinkMacSystemFont, -apple-system, 'Avenir Next',
@@ -92,12 +92,12 @@ body,
 body.light-theme {
 
     --color-primary: #ffffff;
-    --color-secondary: #ffffff; // For sidebars
+    --color-secondary: hsl(0deg 0% 97%); // For sidebars
 
 
 
-    --color-button-bg: hsl(240deg 1% 19%);
-    --color-button-hover: hsl(240deg 1% 25%);
+    --color-button-bg: hsl(240deg 0% 94%);
+    --color-button-hover: hsl(240deg 0% 92%);
 
     --color-accent: #746BD2;
     --color-accent-text: white;
@@ -108,10 +108,7 @@ body.light-theme {
 
     // Colors: Text + Content
     --title-color: var(--color-invert-3);
-    --text-color: hsl(0deg 0% 80%);
-    --ui-text-color: var(--color-primary-5);
-    --color-text-titles-big: hsl(0deg 0% 70%);
-    --empty-text-color: hsl(0deg 0% 27%);
+    --ui-text-color: var(--color-invert-5);
     --dark-text-color: var(--color-invert);
     --light-text-color: var(--color-invert-5);
     --invert-text-color: var(--color-primary);
@@ -153,7 +150,7 @@ body.light-theme {
     --scroll-bar-color: var(--color-primary-4);
     --scroll-bar-active-color: var(--color-primary-5);
 
-    --border-color: #353535;//var(--color-primary-3);
+    --border-color: var(--color-primary-3);
     --hover-border-color: var(--color-primary-4);
     --focus-border-color: var(--color-primary-5);
     --select-border-color: var(--color-invert-5);
@@ -173,8 +170,17 @@ body.light-theme {
 
     --modal-bg-opacity: 0.2;
 
-    --text-empty-message-color: #353535;
+    // --text-empty-message-color: #DDDDDD;
+    --empty-text-color: #DDDDDD;
+    --text-empty-message-color: var(--empty-text-color);
     --sidebar-hover-color: rgba(0, 0, 0, 0.1);
+
+    --color-text-titles-big: #454545;
+    --text-color: #222;
+
+    // Zen theme
+    // --color-text-titles-big: hsl(0deg 0% 70%);
+    // --text-color: #777;
 }
 
 body.dark-theme {
@@ -212,7 +218,17 @@ body.dark-theme {
 
     --modal-bg-opacity: 0.8;
 
-    --text-empty-message-color: #353535;
+    --color-button-bg: hsl(240deg 1% 19%);
+    --color-button-hover: hsl(240deg 1% 25%);
+
+    --border-color: #353535;
+
+    --text-color: hsl(0deg 0% 80%);
+    --ui-text-color: var(--color-primary-5);
+
+    // --text-empty-message-color: #353535;
+    --empty-text-color: hsl(0deg 0% 22%);
+    --text-empty-message-color: var(--empty-text-color);
     --sidebar-hover-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -245,7 +261,8 @@ body.dawn-theme {
 
     --modal-bg-opacity: 0.2;
 
-    --text-empty-message-color: #353535;
+    --empty-text-color: hsl(0deg 0% 22%);
+    --text-empty-message-color: var(--empty-text-color);
     --sidebar-hover-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -290,7 +307,8 @@ body.night-theme {
 
     --modal-bg-opacity: 0.8;
 
-    --text-empty-message-color: #353535;
+    --empty-text-color: hsl(0deg 0% 22%);
+    --text-empty-message-color: var(--empty-text-color);
     --sidebar-hover-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -333,6 +351,7 @@ body.lush-theme {
 
     --modal-bg-opacity: 0.8;
 
-    --text-empty-message-color: #353535;
+    --empty-text-color: hsl(0deg 0% 22%);
+    --text-empty-message-color: var(--empty-text-color);
     --sidebar-hover-color: rgba(0, 0, 0, 0.1);
 }

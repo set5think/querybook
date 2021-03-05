@@ -234,7 +234,7 @@ export const QuerybookSidebarUIGuide: React.FC = () => {
             <Button
                 className="Tour-button"
                 onClick={startTour}
-                color="accent"
+                // color="accent"
                 theme="fill"
             >
                 UI Tutorial

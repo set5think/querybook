@@ -5,14 +5,14 @@
     z-index: 5;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     .sidebar-content {
         margin-top: 88px;
     }
 
     .contents-toggle-button {
-        border: var(--border);
+        border: none;
         border-left: none;
         margin-right: 0;
         padding-right: 8px;

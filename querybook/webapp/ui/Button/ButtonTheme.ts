@@ -95,5 +95,8 @@ export function computeStyleButtonProps(
         // themeProps.hoverBgColor = 'var(--light-bg-color)';
     }
 
+    themeProps.color = 'var(--ui-text-color)';
+    themeProps.hoverColor = 'var(--text-color)';
+
     return themeProps;
 }
