@@ -105,7 +105,7 @@ export class DataDocStatementExecutionBar extends React.PureComponent<IProps> {
         );
 
         const statementExecutionBar = (
-            <div className={'DataDocStatementExecutionBar flex-row'}>
+            <div className={'DataDocStatementExecutionBar flex-row row-padding'}>
                 {showExecutedQueryButton}
                 {this.getToggleLogsButtonDOM()}
                 {this.getToggleMetaButtonDOM()}

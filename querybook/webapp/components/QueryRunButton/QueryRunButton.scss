@@ -12,11 +12,14 @@
 
     .QueryEngineSelector {
         margin-right: var(--padding);
-        padding: 10px 20px;
-        border-radius: var(--border-radius);
 
-        &:hover {
-            background: var(--color-button-hover);
+        .Dropdown {
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+
+            &:hover {
+                background: var(--color-button-hover);
+            }
         }
     }
 

@@ -1,15 +1,21 @@
 .Tabs {
     cursor: default;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    padding: unquote("calc(var(--padding) / 2)");
+    display: inline-flex;
+
     ul {
         display: flex;
         flex-direction: row;
         text-align: center;
 
         li {
-            // padding: 5px 0px;
             padding: var(--padding);
+            // To make it visually the same padding even if different
+            padding-left: unquote("calc(var(--padding) * 1.5)");
+            padding-right: unquote("calc(var(--padding) * 1.5)");
             box-sizing: border-box;
-            border-bottom: solid 1px transparent;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -116,9 +122,8 @@
     &.wide {
         ul {
             width: 100%;
+
             li {
-                padding-left: 0;
-                padding-right: 0;
                 flex: 1;
             }
         }

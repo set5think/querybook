@@ -53,7 +53,7 @@ export const DataDocTemplateVarForm: React.FunctionComponent<IDataDocTemplateVar
                                           <FormFieldInputSection>
                                               <Field
                                                   name={`variables.${index}[0]`}
-                                                  placeholder="Name"
+                                                  placeholder="Variable's Name"
                                               />
                                           </FormFieldInputSection>
                                           <FormFieldInputSection>
@@ -115,33 +115,45 @@ export const DataDocTemplateVarForm: React.FunctionComponent<IDataDocTemplateVar
                                 <InfoButton layout={['bottom', 'right']}>
                                     <div>
                                         <p>
-                                            {'Put {{variable_name}} in your query and it will get substituted with ' +
-                                                'variable_value. Some variables are provided automatically. Such as:'}
+                                            {'Include {{variable_name}} in your query and it will get substituted with ' +
+                                                'its value.'}
+                                            <br/>
+                                            <br/>
+                                            <span>
+                                                Some variables are provided automatically.
+                                            </span>
+                                            <br/>
+                                            <br/>
+                                            <span>
+                                                Such as:
+                                            </span>
                                             <ul>
                                                 <li>
                                                     {
-                                                        '{{today}} which maps to todays date in yyyy-mm-dd'
+                                                        '* {{today}} which maps to todays date in yyyy-mm-dd format. '
                                                     }
                                                 </li>
                                                 <li>
                                                     {
-                                                        "{{yesterday}} which maps to yesterday's date"
+                                                        "* {{yesterday}} which maps to yesterday's date."
                                                     }
                                                 </li>
                                             </ul>
                                         </p>
+                                        <br/>
                                         <p>
                                             {
-                                                'You can also put variable definitions in variables for recursive rendering.'
+                                                'You can also include variables in variables for recursive rendering.'
                                             }
                                         </p>
+                                        <br/>
                                         <p>
                                             <Link
                                                 to={
                                                     'https://jinja.palletsprojects.com/en/2.11.x/templates/'
                                                 }
                                             >
-                                                See complete guide here.
+                                                See the complete guide here.
                                             </Link>
                                         </p>
                                     </div>

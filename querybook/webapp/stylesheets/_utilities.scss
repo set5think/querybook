@@ -64,6 +64,16 @@
     align-items: center;
 }
 
+.row-padding {
+    & > * {
+        margin-left: 10px;
+
+        &:first-child {
+            margin-left: 0px;
+        }
+    }
+}
+
 .fullscreen {
     position: fixed;
     bottom: 0;

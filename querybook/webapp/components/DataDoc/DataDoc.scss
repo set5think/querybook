@@ -108,6 +108,7 @@
                 color: var(--color-text-titles-big);
                 font-size: var(--xxxlarge-text-size);
                 font-weight: bold;
+                font-family: var(--family-display);
 
                 &::placeholder {
                     color: var(--empty-text-color);

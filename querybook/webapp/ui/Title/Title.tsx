@@ -75,7 +75,7 @@ export const Title: React.FunctionComponent<ITitleProps> = ({
         color != null
             ? color
             : subtitle
-            ? 'var(--dark-text-color)'
+            ? 'var(--ui-text-color)'
             : 'var(--text-color)';
     return (
         <StyledTitle

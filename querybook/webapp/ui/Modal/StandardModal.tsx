@@ -9,6 +9,7 @@ import { useAppBlur } from 'hooks/ui/useAppBlur';
 
 // Blurring takes extra time so disabling by default
 const BLUR_MODAL_BACKGROUNDS = false;
+const HIDE_CLOSE_PREVENTS_CLICK = false;
 
 export const StandardModal: React.FunctionComponent<IStandardModalProps> = ({
     hideClose = false,
@@ -49,7 +50,7 @@ export const StandardModal: React.FunctionComponent<IStandardModalProps> = ({
         <div className={modalClassName}>
             <div
                 className="Modal-background fullscreen"
-                onClick={hideClose ? null : onHide}
+                onClick={hideClose && HIDE_CLOSE_PREVENTS_CLICK ? null : onHide}
             />
             <div className="Modal-box">
                 {titleDOM}

@@ -15,7 +15,7 @@ export const ScheduleDataDocButton: React.FunctionComponent<IProps> = ({
 }) => {
     const [showForm, setShowForm] = React.useState(false);
     const modal = showForm && (
-        <Modal onHide={() => setShowForm(false)} title="Run this DataDoc on a schedule">
+        <Modal onHide={() => setShowForm(false)} hideClose>
             <DataDocSchedule isEditable={isEditable} docId={docId} />
         </Modal>
     );
