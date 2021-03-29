@@ -83,6 +83,10 @@
 
     .DataDocNavigatorBoardSection-list {
         padding-bottom: var(--padding);
+
+        &:empty {
+            display: none;
+        }
     }
 
     .board-item-list-empty {

@@ -17,6 +17,7 @@
             width: 16px;
             height: 16px;
             outline: none;
+            margin-right: var(--padding);
         }
 
         &.checked::before {

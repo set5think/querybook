@@ -4,6 +4,7 @@
     align-items: center;
     padding: var(--padding);
     padding-left: 0px;
+    padding-top: 0px;
     margin: 0px;
 
     &.FormField-stacked {
@@ -62,7 +63,8 @@
 
 .FormSectionHeader {
     cursor: default;
-    padding-top: 8px;
+    padding-bottom: var(--padding);
+
     span {
         font-size: var(--text-size);
         white-space: nowrap;

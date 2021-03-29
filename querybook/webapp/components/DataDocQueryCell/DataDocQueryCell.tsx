@@ -557,6 +557,7 @@ class DataDocQueryCellComponent extends React.Component<IProps, IState> {
                 onHide={this.toggleInsertQuerySnippetModal}
                 className="wide"
                 title="Insert Query Snippet"
+                hideClose
             >
                 <QuerySnippetInsertionModal
                     onInsert={this.handleInsertSnippet}

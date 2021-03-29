@@ -3,9 +3,10 @@
 .StatementExecutionPicker {
     .custom-statement-picker-button {
         cursor: pointer;
-        font-weight: normal;
         display: flex;
         align-items: center;
+        margin-bottom: var(--padding);
+        color: var(--ui-text-color);
 
         .dropdown-icon {
             margin-left: 0.5em;

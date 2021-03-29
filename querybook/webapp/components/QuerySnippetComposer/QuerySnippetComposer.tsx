@@ -232,7 +232,10 @@ class QuerySnippetComposerComponent extends React.PureComponent<
             const { querySnippet } = this.props;
 
             sendConfirm({
-                message: 'This template will be removed PERMANENTLY.',
+                message: 'Are you sure you want to permanently delete this Snippet?',
+                confirmText: 'Yes, permanently delete this Snippet',
+                confirmIcon: 'alert-triangle',
+                isDestructiveAction: true,
                 onConfirm: async () => {
                     try {
                         await this.props.deleteQuerySnippet(querySnippet);
@@ -481,7 +484,6 @@ class QuerySnippetComposerComponent extends React.PureComponent<
 
         const controls = [
             <AsyncButton
-                color="confirm"
                 onClick={
                     formInvalid ? () => Promise.resolve() : this.handleSave
                 }
@@ -494,8 +496,8 @@ class QuerySnippetComposerComponent extends React.PureComponent<
         const controlsDOM = <div className="right-align">{controls}</div>;
 
         const composerTitle = isUpdateForm
-            ? 'Update Template'
-            : 'Create Template';
+            ? 'Update Snippet'
+            : 'Create Snippet';
 
         const canUserDelete =
             isUpdateForm &&

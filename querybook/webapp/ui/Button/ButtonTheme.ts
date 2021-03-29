@@ -19,6 +19,8 @@ interface IButtonColorConfig {
     secondary: string; // Background and border
     secondaryHover?: string;
     textColor?: string; // Text color override
+    backgroundColor?: string; // Background color override
+    backgroundHoverColor?: string; // Background hover color override
 }
 
 const buttonThemeToProps: Record<ButtonColorType, IButtonColorConfig> = {
@@ -27,6 +29,8 @@ const buttonThemeToProps: Record<ButtonColorType, IButtonColorConfig> = {
         secondary: 'var(--color-button-bg-destructive)',
         secondaryHover: 'var(--color-button-bg-destructive)',
         textColor: 'var(--color-text-destructive)',
+        backgroundColor: 'var(--color-button-bg-destructive)',
+        backgroundHoverColor: 'var(--color-button-bg-destructive)',
     },
     confirm: {
         primary: 'var(--color-true-dark)',
@@ -81,6 +85,11 @@ export function computeStyleButtonProps(
             themeProps.hoverBgColor =
                 colorConfig.primaryHover || colorConfig.primary;
         }
+
+        // Overrides, given planning to decrease the amount of styles
+        themeProps.bgColor = colorConfig.backgroundColor || 'var(--color-button-bg)';
+        themeProps.hoverColor = colorConfig.backgroundHoverColor || 'var(--color-button-hover)';
+
     } else if (theme === 'outline') {
         themeProps.color = colorConfig.primary;
         themeProps.hoverColor = colorConfig.primaryHover || colorConfig.primary;
@@ -99,6 +108,8 @@ export function computeStyleButtonProps(
 
     themeProps.color = colorConfig.textColor || 'var(--ui-text-color)';
     themeProps.hoverColor = colorConfig.textColor || 'var(--text-color)';
+
+
 
     return themeProps;
 }

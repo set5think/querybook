@@ -74,12 +74,12 @@
 .flex-center.with-padding,
 .flex-left.with-padding {
 
-    div + div {
-        margin-left: var(--padding);
-    }
+    & > * {
+        margin-left: 10px;
 
-    span + span {
-        margin-left: var(--padding);
+        &:first-child {
+            margin-left: 0px;
+        }
     }
 }
 

@@ -11,6 +11,7 @@ import { QueryExecutionNotificationButton } from './QueryExecutionNotificationBu
 import { QueryExecutionStatus } from 'const/queryExecution';
 
 import './QueryExecutionBar.scss';
+import { UserName } from 'components/UserBadge/UserName';
 
 interface IProps {
     queryExecution: IQueryExecution;
@@ -44,7 +45,9 @@ export const QueryExecutionBar: React.FunctionComponent<IProps> = ({
 
     return (
         <div className="QueryExecutionBar">
-            {executionDateDOM}
+            <div className="QueryExecutionBar-date">
+                {executionDateDOM}
+            </div>
             {notificationButtonDOM}
             <CopyButton
                 type="text"

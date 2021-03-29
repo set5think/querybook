@@ -58,12 +58,8 @@
     }
 
     &:not(.collapsed) {
-        .EntitySidebar {
-            // border-right: var(--border);
-        }
-
         .sidebar-environment-picker:not(:empty) {
-            border-bottom: var(--border);
+            background: var(--bg-color-secondary);
         }
 
         .sidebar-content-main {

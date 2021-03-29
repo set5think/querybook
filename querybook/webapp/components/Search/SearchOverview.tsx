@@ -209,6 +209,7 @@ export const SearchOverview: React.FunctionComponent = () => {
                 items={SEARCH_TABS}
                 selectedTabKey={searchType}
                 onSelect={onSearchTabSelect}
+                wide
             />
         </div>
     );

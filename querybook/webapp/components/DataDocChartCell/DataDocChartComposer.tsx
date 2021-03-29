@@ -934,13 +934,15 @@ const DataDocChartComposerComponent: React.FunctionComponent<
 
     const makeLeftDOM = () => (
         <div className="DataDocChartComposer-left">
-            <div className="DataDocChartComposer-chart">
-                {renderPickerDOM()}
-                <div className="DataDocChartComposer-chart-sizer">
-                    <ErrorBoundary>{chartData ? chartDOM : null}</ErrorBoundary>
+            <div className="DataDocChartComposer-left-inner">
+                <div className="DataDocChartComposer-chart">
+                    {renderPickerDOM()}
+                    <div className="DataDocChartComposer-chart-sizer">
+                        <ErrorBoundary>{chartData ? chartDOM : null}</ErrorBoundary>
+                    </div>
                 </div>
+                {tableDOM}
             </div>
-            {tableDOM}
         </div>
     );
 
@@ -950,8 +952,6 @@ const DataDocChartComposerComponent: React.FunctionComponent<
                 {makeLeftDOM()}
                 <div className="DataDocChartComposer-right">
                     <div className="DataDocChartComposer-right-inner">
-                        {tabsDOM}
-                        {formDOM}
                         {isEditable ? (
                             <div className="DataDocChartComposer-button">
                                 <SoftButton
@@ -961,6 +961,10 @@ const DataDocChartComposerComponent: React.FunctionComponent<
                                 />
                             </div>
                         ) : null}
+                        <div className="DataDocChartComposer-right-editor">
+                            {tabsDOM}
+                            {formDOM}
+                        </div>
                     </div>
                 </div>
             </div>
